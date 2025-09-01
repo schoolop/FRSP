@@ -1,0 +1,21 @@
+{
+  "name": "discord-auth-app",
+  "version": "1.0.0",
+  "description": "A Node.js app using Express and Discord OAuth2 authentication",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["discord", "oauth2", "express", "passport"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4",
+    "node-fetch": "^3.4.1",
+    "dotenv": "^16.3.1"
+  },
+  "type": "commonjs"
+}
