@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Manager</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    async function refreshStatus() {
+      const res = await fetch("/api/status");
+      const data = await res.json();
+      document.getElementById("current").innerText = data.status;
+    }
+    window.onload = refreshStatus;
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ Session Manager</h1>
+    <h2>Current Status: <span id="current">...</span></h2>
+
+    <form action="/set/up" method="POST">
+      <button class="btn special">✅ Set Session UP</button>
+    </form>
+    <form action="/set/down" method="POST">
+      <button class="btn">❌ Set Session DOWN</button>
+    </form>
+
+    <a href="/status" class="btn">📊 View Public Status</a>
+  </div>
+</body>
+</html>
