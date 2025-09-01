@@ -4,25 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Florida State Roleplay - Info</title>
-  <link rel="stylesheet" href="../style.css"> <!-- adjust path if style.css is outside view -->
+  <link rel="stylesheet" href="/style.css"> <!-- adjust if needed -->
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111827;
-      color: #f9fafb;
       margin: 0;
       padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 700px;
+      width: 100%;
+      background: #1e293b;
       padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      text-align: center;
     }
 
-    h1, h2 {
-      color: #facc15;
-      text-align: center;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
     }
 
     .section {
@@ -34,25 +43,47 @@
       text-align: center;
     }
 
-    a.btn {
-      display: inline-block;
-      background-color: #2563eb;
-      color: #f9fafb;
-      text-decoration: none;
-      padding: 12px 20px;
-      margin: 10px 5px 0 0;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+    .section p {
+      margin-bottom: 15px;
     }
 
-    a.btn:hover {
-      background-color: #1d4ed8;
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn.special {
+      background: linear-gradient(135deg, #10b981, #34d399);
+    }
+
+    .btn.special:hover {
+      background: linear-gradient(135deg, #059669, #10b981);
     }
 
     footer {
       text-align: center;
-      margin-top: 40px;
-      padding: 20px;
+      margin-top: 30px;
       font-size: 14px;
       color: #9ca3af;
     }
@@ -67,14 +98,14 @@
         Florida State Roleplay is a vibrant and immersive community focused on realistic roleplay experiences. Players can take on the roles of law enforcement, emergency services, or civilians, interacting in a detailed and dynamic world. Our goal is to create engaging scenarios that encourage collaboration, creativity, and realism. We take pride in building a friendly and professional environment where everyone can enjoy roleplay safely.
       </p>
       <p>
-        Make sure to review our server rules for proper conduct and gameplay guidelines: 
+        Make sure to review our server rules for proper conduct and gameplay guidelines:
         <a href="https://discord.com/channels/1307970869682765935/1308736644265803786" target="_blank" class="btn">📜 View Rules</a>
       </p>
       <p>
         We are always looking for dedicated staff members to join our team. If you want to help manage the community, maintain order, or assist players, we encourage you to apply for a staff position today!
       </p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdggGzL8mKH0qETS1AmpJEhY5K4PJ6qoQ-79DWu6x1B6_uKvQ/viewform" target="_blank" class="btn">👮 Apply for Staff</a>
-      <a href="/" class="btn">🏠 Back to Home</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdggGzL8mKH0qETS1AmpJEhY5K4PJ6qoQ-79DWu6x1B6_uKvQ/viewform" target="_blank" class="btn special">👮 Apply for Staff</a>
+      <a href="./" class="btn">🏠 Back to Home</a>
     </section>
 
     <footer>
