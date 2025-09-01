@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Status</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    async function loadStatus() {
+      const res = await fetch("/api/status");
+      const data = await res.json();
+      const statusEl = document.getElementById("status");
+      const note = document.getElementById("note");
+
+      if (data.status === "UP") {
+        statusEl.innerHTML = "✅ Session is UP";
+        statusEl.style.color = "lime";
+        note.innerHTML = "";
+      } else {
+        statusEl.innerHTML = "❌ Session is DOWN";
+        statusEl.style.color = "red";
+        note.innerHTML = "⚠️ Joining now will place you under moderation.";
+      }
+    }
+    window.onload = loadStatus;
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Session Status</h1>
+    <h2 id="status">Loading...</h2>
+    <p id="note"></p>
+    <a href="/login" class="btn">🔑 Staff Login</a>
+  </div>
+</body>
+</html>
