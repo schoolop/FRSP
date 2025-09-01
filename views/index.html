@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florida State Roleplay</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    async function loadBanner() {
+      const res = await fetch("/api/status");
+      const data = await res.json();
+      const banner = document.getElementById("session-banner");
+
+      if (data.status === "UP") {
+        banner.innerHTML = "✅ Session is currently <b>UP</b>";
+        banner.style.background = "#10b981"; // green
+      } else {
+        banner.innerHTML = "❌ Session is currently <b>DOWN</b><br><small>Joining now will place you under moderation.</small>";
+        banner.style.background = "#dc2626"; // red
+      }
+    }
+    window.onload = loadBanner;
+  </script>
+  <style>
+    #session-banner {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner -->
+  <div id="session-banner">Loading session status...</div>
+
+  <!-- Main -->
+  <div class="container">
+    <h1>🚓 Florida State Roleplay</h1>
+    <p>Join our session or apply for a staff position below!</p>
+
+    <a href="https://policeroleplay.community/join/FSRRRP" target="_blank" class="btn special">
+      🔗 Join Session
+    </a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdggGzL8mKH0qETS1AmpJEhY5K4PJ6qoQ-79DWu6x1B6_uKvQ/viewform" target="_blank" class="btn">
+      👮 In-Game Staff Application
+    </a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSenRT4iFFOEBpfWeEjkUWzZR3kkPobuwD6mw8iWUCZjGA3JbQ/viewform" target="_blank" class="btn">
+      🛡️ Discord Moderation Application
+    </a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkBHgKiFx7nXxSwTZ21w5BXmM2Vp9h84j5VrudNb6NWsZ6mw/viewform" target="_blank" class="btn">
+      📸 Media Team Application
+    </a>
+
+    <a href="/status" class="btn">
+      📊 Check Session Status
+    </a>
+  </div>
+</body>
+</html>
